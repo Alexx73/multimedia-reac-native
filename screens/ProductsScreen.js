@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     },
 
     title: {
-        marginTop: -80,
+        marginTop: -110,
         fontSize: 35,
         fontWeight: 'bold',
         textAlign: 'center',

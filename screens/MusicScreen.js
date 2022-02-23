@@ -8,19 +8,20 @@ import { globalStyles, images } from '../global/Global1'
 function MusicScreen ({navigation}) {
     return (
         <View style={styles.container } >
-            <Text  >
+            {/* <Text  >
             MusicScreen
-            </Text>
+            </Text> */}
 
-            <Text style={ globalStyles.subTitle } >
+            <Text style={ [globalStyles.title, {marginTop: 30},] } >
                 Music
             </Text>      
 
             <TouchableOpacity onPress={() => navigation.navigate('MusicDetails', {
-                title:'',
-                year: '',
+                title:'Use Your Illusion',
+                year: '1991',
                 tracks: 12, 
-                pic: 5
+                pic: 5,
+                rating: '*****'
             } )} >
                         
                     <Image 
@@ -31,10 +32,12 @@ function MusicScreen ({navigation}) {
             </TouchableOpacity> 
 
             <TouchableOpacity onPress={() => navigation.navigate('MusicDetails', {
-                title:'',
-                year: '',
-                tracks: 12, 
-                pic: 6
+                title:'Permanent Vacation',
+                year: '1988',
+                tracks: 13, 
+                pic: 6,
+                rating: '*****'
+
             } )} >
                         
                     <Image 

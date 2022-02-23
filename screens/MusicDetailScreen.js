@@ -8,7 +8,7 @@ import { globalStyles, images } from '../global/Global1'
 
 function MusicDetailScreen ({route, navigation }) {
 
-    const { title, year, tracks, pic } = route.params
+    const { title, year, tracks, pic, rating } = route.params
     return (
         // <View>
         //     <Text>
@@ -19,11 +19,12 @@ function MusicDetailScreen ({route, navigation }) {
 
         <View style={ styles.screen} >
                 <View style={  styles.cardContainer} >
-                <Text style={ styles.title } >
+                <Text style={ [globalStyles.title, {marginTop: -20}] } >
                     {title}
                     </Text>
                     <Image 
-                            style={{ width: 320, height:250, resizeMode: 'contain', padding: 20 }}
+                            // style={{ width: 320, height:250, resizeMode: 'contain', padding: 20 }}
+                            style={  globalStyles.musicImg2}
                             source={ images.img[pic] }
                             />  
                     <View>
@@ -34,18 +35,12 @@ function MusicDetailScreen ({route, navigation }) {
 
                         <View style={ styles.inline} >
                             <Text style={ styles.info } >Rating: </Text>
-                            <Text style={{ fontSize:22, color:'yellow', fontWeight: 'bold' }} >{tracks}</Text>
-
-                            {/* <AntDesign name="star" size={22} color="yellow" /> */}
-                            
-
-
-
+                            <Text style={{ fontSize:22,  color: 'red', fontWeight: 'bold' }} >{rating}*</Text>
                         </View>
 
                         <View style={ styles.inline} >
-                            <Text style={ styles.info } >Duration: </Text>
-                            <Text style={{ fontSize:22 }} ></Text>
+                            <Text style={ styles.info } >Tracks: </Text>
+                            <Text style={{ fontSize:22 }} >{tracks} </Text>
                         </View>
                         
                         {/* <Text>Rating: {year}</Text> 
@@ -58,6 +53,22 @@ function MusicDetailScreen ({route, navigation }) {
 
 
 const styles = StyleSheet.create({
+
+    screen: {
+        flex:1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#e6e6fa'
+    },
+
+    inline: {
+        flexDirection: 'row'
+    },
+
+    info: {
+        fontSize: 22,
+        fontWeight: 'bold'
+    }
     
 })
 

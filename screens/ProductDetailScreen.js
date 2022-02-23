@@ -21,7 +21,7 @@ function ProductDetailScreen ({ route, navigation  }) {
                     {title}
                     </Text>
                     <Image 
-                            style={{ width: 320, height:250, resizeMode: 'contain', padding: 20 }}
+                            style={{ width: 330, height:260, resizeMode: 'contain', padding: 20 }}
                             source={ images.img[pic] }
                             />  
                     <View>

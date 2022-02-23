@@ -41,7 +41,22 @@ const globalStyles = StyleSheet.create({
         marginHorizontal: 'auto',
         // marginBottom: 30,
         marginVertical:20
+    },
+
+    musicImg2: {
+        width: 350,
+        height:350,
+        // flex: 1,
+        // marginHorizontal: 'auto',
+        // marginBottom: 30,
+        marginVertical:20,
+        justifyContent: 'center',
+        alignItems: 'center',
+        
     }
+
+
+
 
 })
 
