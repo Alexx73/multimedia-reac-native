@@ -17,7 +17,7 @@ function MusicScreen ({navigation}) {
             </Text>      
 
             <TouchableOpacity onPress={() => navigation.navigate('MusicDetails', {
-                title:'Use Your Illusion',
+                title:'Use Your Illusion 1',
                 year: '1991',
                 tracks: 12, 
                 pic: 5,
