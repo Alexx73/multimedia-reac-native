@@ -20,25 +20,25 @@ function MusicScreen ({navigation}) {
                 Music 
             </Text>       */}
 
-            <TouchableOpacity onPress={() => navigation.navigate('MusicDetails', {
+            {/* <TouchableOpacity onPress={() => navigation.navigate('MusicDetails', {
                 title:'Use Your Illusion 1',
                 year: '1991',
                 tracks: 12, 
                 pic: 5,
                 rating: '*****'
             } )} >                       
-                    {/* <Image 
+                    <Image 
                     // style={ { width: 120, height:110, resizeMode: 'contain' }}
                     style={globalStyles.musicImg}
                     source={ require('../assets/movies/music1.jpg')}
-                    /> */}
-            </TouchableOpacity> 
+                    />
+            </TouchableOpacity>  */}
 
             <TouchableOpacity onPress={() => navigation.navigate('MusicDetails', {
-                title:'Permanent Vacation',
+                title:'Use Your Illusion 1',
                 year: '1988',
                 tracks: 13, 
-                pic: 6,
+                pic: 5,
                 rating: '*****'
             } )} >                      
                     {/* <Image 
@@ -55,15 +55,16 @@ function MusicScreen ({navigation}) {
             numColumns={2}
             renderItem={({item}) => (
                 <View>
-                    <Text>
+                    <Text style={{color:'#00203FFF', fontSize: 16, fontWeight:'bold', marginTop:5}} >
                     { item.title}
                     </Text>
                     <TouchableOpacity onPress={() => navigation.navigate('MusicDetails', {
-                        title:'Permanent Vacation',
-                        year: '1988',
-                        tracks: 13, 
-                        pic: 6,
-                        rating: '*****'
+                        title: item.title,
+                        year: item.year,
+                        tracks: item.tracks, 
+                        pic: item.source,
+                        rating: '*****',
+                        id: item.id
                     } )} >
                         <Image 
                         style={globalStyles.musicImg}
@@ -86,6 +87,10 @@ const styles = StyleSheet.create({
     container: {
         justifyContent: 'center',
         alignItems: 'center',
+        // marginTop: 40,
+        backgroundColor: '#ADEFD1FF',
+        color:'white',
+
       },
     
 })

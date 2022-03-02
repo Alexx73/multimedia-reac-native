@@ -3,12 +3,12 @@ import React from 'react'
 import { Text, View, StyleSheet, Image} from 'react-native'
 
 import { globalStyles, images } from '../global/Global1'
-
+import { MUSIC, DATOS } from '../data/datos'
 
 
 function MusicDetailScreen ({route, navigation }) {
 
-    const { title, year, tracks, pic, rating } = route.params
+    const { title, year, tracks, pic, rating, id } = route.params
     return (
         // <View>
         //     <Text>
@@ -25,9 +25,11 @@ function MusicDetailScreen ({route, navigation }) {
                     <Image 
                             // style={{ width: 320, height:250, resizeMode: 'contain', padding: 20 }}
                             style={  globalStyles.musicImg2}
-                            source={ images.img[pic] }
+                            source={ pic}
                             />  
                     <View>
+                    <Text style={ styles.info} > ID: {id} </Text>
+
                         <View style={ styles.inline} >
                             <Text style={ styles.info } >Year: </Text>
                             <Text style={{ fontSize:22 }} >{year}</Text>
@@ -58,7 +60,9 @@ const styles = StyleSheet.create({
         flex:1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#e6e6fa'
+        // backgroundColor: '#e6e6fa',
+        // backgroundColor: '#00203FFF',
+        // backgroundColor: 'red',
     },
 
     inline: {

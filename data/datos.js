@@ -68,7 +68,7 @@ export const DATOS = [
       year: '1991',
       price: 3300,
       tracks: 14, 
-      rating: '*****',
+      rating: '*****hye',
       source: require('../assets/movies/music1.jpg')
     },
     {
@@ -92,34 +92,34 @@ export const DATOS = [
       source: require('../assets/movies/music3.jpg')
     }, 
     {
-      id: '1',
+      id: '4',
       category: 'music',
-      title:'Use Your Illusion 1',
-      year: '1991',
-      price: 3300,
-      tracks: 14, 
-      rating: '*****',
-      source: require('../assets/movies/music1.jpg')
-    },
-    {
-      id: '2',
-      category: 'music',
-      title:'Use Your Illusion 2',
+      title:'Core',
       year: '1991',
       price: 3300,
       tracks: 12, 
       rating: '*****',
-      source: require('../assets/movies/music2.jpg')
+      source: require('../assets/movies/music4.jpg')
     },
     {
-      id: '3',
+      id: '5',
       category: 'music',
-      title:'Permanent Vacation',
-      year: '1991',
+      title:'Youthanasia',
+      year: '1994',
       price: 3300,
       tracks: 12, 
       rating: '*****',
-      source: require('../assets/movies/music3.jpg')
+      source: require('../assets/movies/music5.jpg')
+    },
+    {
+      id: '6',
+      category: 'music',
+      title:'Fear of the Dark',
+      year: '1992',
+      price: 3300,
+      tracks: 12, 
+      rating: '*****',
+      source: require('../assets/movies/music6.jpg')
     }
 
 

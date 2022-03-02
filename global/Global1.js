@@ -11,6 +11,8 @@ export const images = {
         '4': require('../assets/movies/mov4.jpg'),
         '5': require('../assets/movies/music1.jpg'),
         '6': require('../assets/movies/music2.jpg'),
+        '7': require('../assets/movies/music3.jpg'),
+
     }
 } 
 
