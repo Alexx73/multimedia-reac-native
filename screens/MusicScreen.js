@@ -52,6 +52,7 @@ function MusicScreen ({navigation}) {
 
             <FlatList
             data={MUSIC}
+            numColumns={2}
             renderItem={({item}) => (
                 <View>
                     <Text>

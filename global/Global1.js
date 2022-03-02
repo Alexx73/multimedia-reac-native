@@ -40,7 +40,10 @@ const globalStyles = StyleSheet.create({
         // alignItems: 'center',
         marginHorizontal: 'auto',
         // marginBottom: 30,
-        marginVertical:20
+        marginVertical: 25,
+        marginHorizontal: 3,
+        marginBottom:10,
+        paddingBottom:20
     },
 
     musicImg2: {
@@ -52,6 +55,7 @@ const globalStyles = StyleSheet.create({
         marginVertical:20,
         justifyContent: 'center',
         alignItems: 'center',
+        
         
     }
 
