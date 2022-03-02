@@ -34,14 +34,14 @@ const globalStyles = StyleSheet.create({
     },
 
     musicImg: {
-        width: 200,
-        height:200,
+        width: 170,
+        height:170,
         // flex: 1,
         // alignItems: 'center',
         marginHorizontal: 'auto',
         // marginBottom: 30,
-        marginVertical: 25,
-        marginHorizontal: 3,
+        marginVertical: 5,
+        marginHorizontal: 10,
         marginBottom:10,
         paddingBottom:20
     },

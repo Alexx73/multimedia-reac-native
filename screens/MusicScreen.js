@@ -16,9 +16,9 @@ function MusicScreen ({navigation}) {
             MusicScreen
             </Text> */}
 
-            <Text style={ [globalStyles.title, {marginTop: 30},] } >
+            {/* <Text style={ [globalStyles.title, {marginTop: 30},] } >
                 Music 
-            </Text>      
+            </Text>       */}
 
             <TouchableOpacity onPress={() => navigation.navigate('MusicDetails', {
                 title:'Use Your Illusion 1',

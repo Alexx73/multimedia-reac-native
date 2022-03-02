@@ -13,7 +13,8 @@ function ShopNavigator () {
   return (
       <Stack.Navigator
       screenOptions={{
-        headerShown: false,
+        headerShown: true,
+        title: 'Movies'
     }}>
         {/* <Stack.Screen name="Categories" component={CategoriesScreen} /> */}
         <Stack.Screen name="Products" component={ProductsScreen} />

@@ -7,9 +7,9 @@ function ProductsScreen ({ navigation }) {
     return (
         <View style={ styles.container } > 
 
-            <Text style={ styles.title } >
-                Featured Movies
-            </Text>
+            {/* <Text style={ styles.title } >
+                Featured Movies 2
+            </Text> */}
             <View  style={{ flexDirection: 'row' }} >
                 <TouchableOpacity onPress={() => navigation.navigate('Details', { 
                     title:'Star Trek Beyond', 
@@ -81,6 +81,7 @@ function ProductsScreen ({ navigation }) {
 const styles = StyleSheet.create({ 
     
     container: {
+        marginTop: -360,
         flex:1,
         alignItems: 'center',
         justifyContent: 'center',
@@ -90,7 +91,7 @@ const styles = StyleSheet.create({
     },
 
     title: {
-        marginTop: -110,
+        marginTop: 10,
         fontSize: 35,
         fontWeight: 'bold',
         textAlign: 'center',
@@ -98,14 +99,16 @@ const styles = StyleSheet.create({
     },
 
     tinyLogo: {
-        width: 120,
-        height: 100,
+
+        width: 160,
+        height: 120,
         // margin: 10,
         resizeMode: 'contain',
         marginBottom: 10,
-        padding: 10,
-        marginLeft: 25,
-        marginRight: 25,
+        // padding: 10,
+        marginLeft: 20,
+        marginRight: 20,
+        marginTop: 15,
       },
 
 })
