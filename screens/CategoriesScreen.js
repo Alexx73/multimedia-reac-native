@@ -8,9 +8,7 @@ function CategoriesScreen ({navigation}) {
         <View style={ styles.screen } >
 
             <Text style={ globalStyles.title } >Multimedia Center</Text>
-            {/* <Text>
-                Categories Screen
-            </Text> */}
+            
 
             <Text style={ globalStyles.subTitle }
             
@@ -38,13 +36,7 @@ function CategoriesScreen ({navigation}) {
                     style={styles.img}
                     source={ require('../assets/movies/music.png')}
                     />
-                </TouchableOpacity> 
-
-            {/* <Text>
-                Comedies
-            </Text> */}
-
-           
+                </TouchableOpacity>         
         </View>
     )
 }

@@ -7,9 +7,7 @@ function ProductsScreen ({ navigation }) {
     return (
         <View style={ styles.container } > 
 
-            {/* <Text style={ styles.title } >
-                Featured Movies 2
-            </Text> */}
+            
             <View  style={{ flexDirection: 'row' }} >
                 <TouchableOpacity onPress={() => navigation.navigate('Details', { 
                     title:'Star Trek Beyond', 

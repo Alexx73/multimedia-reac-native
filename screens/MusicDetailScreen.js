@@ -45,8 +45,6 @@ function MusicDetailScreen ({route, navigation }) {
                             <Text style={{ fontSize:22 }} >{tracks} </Text>
                         </View>
                         
-                        {/* <Text>Rating: {year}</Text> 
-                        <Text>Duration: {year}</Text> */}
                     </View>        
                 </View>            
             </View>

@@ -11,29 +11,8 @@ import { DATOS, MUSIC } from '../data/datos'
 
 function MusicScreen ({navigation}) {
     return (
-        <View style={styles.container } >
-            {/* <Text  >
-            MusicScreen
-            </Text> */}
-
-            {/* <Text style={ [globalStyles.title, {marginTop: 30},] } >
-                Music 
-            </Text>       */}
-
-            {/* <TouchableOpacity onPress={() => navigation.navigate('MusicDetails', {
-                title:'Use Your Illusion 1',
-                year: '1991',
-                tracks: 12, 
-                pic: 5,
-                rating: '*****'
-            } )} >                       
-                    <Image 
-                    // style={ { width: 120, height:110, resizeMode: 'contain' }}
-                    style={globalStyles.musicImg}
-                    source={ require('../assets/movies/music1.jpg')}
-                    />
-            </TouchableOpacity>  */}
-
+        <View style={styles.container } >           
+        
             <TouchableOpacity onPress={() => navigation.navigate('MusicDetails', {
                 title:'Use Your Illusion 1',
                 year: '1988',
@@ -41,11 +20,7 @@ function MusicScreen ({navigation}) {
                 pic: 5,
                 rating: '*****'
             } )} >                      
-                    {/* <Image 
-                    // style={ { width: 120, height:110, resizeMode: 'contain' }}
-                    style={globalStyles.musicImg}
-                    source={ require('../assets/movies/music2.jpg')}
-                    /> */}
+                    
             </TouchableOpacity> 
 
             {/* ---------------------------- */}

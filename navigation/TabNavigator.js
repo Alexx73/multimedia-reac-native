@@ -46,10 +46,7 @@ function TabNavigator () {
                 tabBarLabel:  'Movies',
                 tabBarIcon: ({ focused }) => (
                     <MaterialIcons name="movie" size={24} color="black" />
-                    // <Image
-                    //   focused={focused}
-                    //   source={require('../assets/movies/movies.png')}
-                    //   style={{height:50, width:50}}/>
+                    
                   ),
             }}
             />

@@ -46,8 +46,7 @@ function ProductDetailScreen ({ route, navigation  }) {
                             <Text style={{ fontSize:22 }} >{duration}</Text>
                         </View>
                         
-                        {/* <Text>Rating: {year}</Text> 
-                        <Text>Duration: {year}</Text> */}
+                        
                     </View>        
                 </View>            
             </View>
