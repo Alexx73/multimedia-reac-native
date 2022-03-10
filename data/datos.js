@@ -64,7 +64,7 @@ export const DATOS = [
     {
       id: '1',
       category: 'music',
-      title:'Use Your Illusion 1',
+      title:'Use Your Illusion 11s',
       year: '1991',
       price: 3300,
       tracks: 14, 

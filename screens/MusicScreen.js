@@ -6,20 +6,34 @@ import { globalStyles, images } from '../global/Global1'
 import List from '../components/List'
 
 import { DATOS, MUSIC } from '../data/datos'
+import { useDispatch } from 'react-redux'
+import { musicCategory } from '../store/actions/music.action'
 
 
 
 function MusicScreen ({navigation}) {
+
+    const dispatch = useDispatch()
+
+    const handlePress = (item) => {
+        dispatch(musicCategory(item.id))
+        navigation.navigate('MusicDetails',{
+            name: item.title,
+        } )
+    }
+
     return (
         <View style={styles.container } >           
         
-            <TouchableOpacity onPress={() => navigation.navigate('MusicDetails', {
-                title:'Use Your Illusion 1',
-                year: '1988',
-                tracks: 13, 
-                pic: 5,
-                rating: '*****'
-            } )} >                      
+            <TouchableOpacity onPress={handlePress
+            // {
+            //     title:'Use Your Illusion 1',
+            //     year: '1988',
+            //     tracks: 13, 
+            //     pic: 5,
+            //     rating: '*****'
+            // } 
+            } >                      
                     
             </TouchableOpacity> 
 
@@ -33,14 +47,16 @@ function MusicScreen ({navigation}) {
                     <Text style={{color:'#00203FFF', fontSize: 16, fontWeight:'bold', marginTop:5}} >
                     { item.title}
                     </Text>
-                    <TouchableOpacity onPress={() => navigation.navigate('MusicDetails', {
-                        title: item.title,
-                        year: item.year,
-                        tracks: item.tracks, 
-                        pic: item.source,
-                        rating: '*****',
-                        id: item.id
-                    } )} >
+                    <TouchableOpacity onPress={handlePress
+                    // {
+                    //     title: item.title,
+                    //     year: item.year,
+                    //     tracks: item.tracks, 
+                    //     pic: item.source,
+                    //     rating: '*****',
+                    //     id: item.id
+                    // }
+                     } >
                         <Image 
                         style={globalStyles.musicImg}
                         source={ item.source} />

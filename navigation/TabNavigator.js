@@ -25,7 +25,7 @@ function TabNavigator () {
 
             }}
             options={{
-                tabBarLabel:  'Music',
+                tabBarLabel:  'Music now',
                 tabBarIcon: ({ focused }) => (
 
                     <MaterialIcons name="library-music" size={38} color="black" />
@@ -43,7 +43,7 @@ function TabNavigator () {
                 title: 'Movies 2',
             }}
             options={{
-                tabBarLabel:  'Movies',
+                tabBarLabel:  'Movies now',
                 tabBarIcon: ({ focused }) => (
                     <MaterialIcons name="movie" size={24} color="black" />
                     

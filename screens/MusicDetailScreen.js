@@ -5,10 +5,19 @@ import { Text, View, StyleSheet, Image} from 'react-native'
 import { globalStyles, images } from '../global/Global1'
 import { MUSIC, DATOS } from '../data/datos'
 
+import { useSelector } from 'react-redux'
 
-function MusicDetailScreen ({route, navigation }) {
 
-    const { title, year, tracks, pic, rating, id } = route.params
+function MusicDetailScreen ({ navigation }) {
+    const music = useSelector ( state => state.music.list)
+
+    const selectedMusic = useSelector(state => state.music.selected)
+
+    const filteredMusic = music.filter( item => item.id === selectedMusic)
+    console.log(filteredMusic.id)
+
+
+    // const { title, year, tracks, pic, rating, id } = route.params
     return (
         // <View>
         //     <Text>
@@ -20,29 +29,29 @@ function MusicDetailScreen ({route, navigation }) {
         <View style={ styles.screen} >
                 <View style={  styles.cardContainer} >
                 <Text style={ [globalStyles.title, {marginTop: -20}] } >
-                    {title}
+                    { filteredMusic.title}
                     </Text>
                     <Image 
                             // style={{ width: 320, height:250, resizeMode: 'contain', padding: 20 }}
                             style={  globalStyles.musicImg2}
-                            source={ pic}
+                            source={filteredMusic.source}
                             />  
                     <View>
-                    <Text style={ styles.info} > ID: {id} </Text>
+                    <Text style={ styles.info} > ID: {filteredMusic.id} </Text>
 
                         <View style={ styles.inline} >
                             <Text style={ styles.info } >Year: </Text>
-                            <Text style={{ fontSize:22 }} >{year}</Text>
+                            <Text style={{ fontSize:22 }} >{filteredMusic.year}</Text>
                         </View>
 
                         <View style={ styles.inline} >
                             <Text style={ styles.info } >Rating: </Text>
-                            <Text style={{ fontSize:22,  color: 'red', fontWeight: 'bold' }} >{rating}*</Text>
+                            <Text style={{ fontSize:22,  color: 'red', fontWeight: 'bold' }} >{filteredMusic.rating}*</Text>
                         </View>
 
                         <View style={ styles.inline} >
                             <Text style={ styles.info } >Tracks: </Text>
-                            <Text style={{ fontSize:22 }} >{tracks} </Text>
+                            <Text style={{ fontSize:22 }} >{filteredMusic.tracks} </Text>
                         </View>
                         
                     </View>        

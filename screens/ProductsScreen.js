@@ -10,7 +10,7 @@ function ProductsScreen ({ navigation }) {
             
             <View  style={{ flexDirection: 'row' }} >
                 <TouchableOpacity onPress={() => navigation.navigate('Details', { 
-                    title:'Star Trek Beyond', 
+                    title:'Star Trek Beyond !!', 
                      year: 2016,
                      pic: '1',
                      rating: '****',
