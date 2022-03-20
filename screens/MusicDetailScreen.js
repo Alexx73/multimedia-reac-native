@@ -6,18 +6,26 @@ import { globalStyles, images } from '../global/Global1'
 import { MUSIC, DATOS } from '../data/datos'
 
 import { useSelector } from 'react-redux'
+import { Audio, Video } from 'expo-av';
 
 
-function MusicDetailScreen ({ navigation }) {
+function MusicDetailScreen ({ navigation , route}) {
+
+
+    
+
+    // ------------------------
     const music = useSelector ( state => state.music.list)
 
     const selectedMusic = useSelector(state => state.music.selected)
 
-    const filteredMusic = music.filter( item => item.id === selectedMusic)
-    console.log(filteredMusic.id)
+    const filteredMusic = music.filter( item => item.music === selectedMusic)
+    console.log(music[selectedMusic])
 
 
-    // const { title, year, tracks, pic, rating, id } = route.params
+    const { title, year, tracks, pic, rating, id } = route.params
+
+    console.log(route.params)
     return (
         // <View>
         //     <Text>
@@ -28,31 +36,59 @@ function MusicDetailScreen ({ navigation }) {
 
         <View style={ styles.screen} >
                 <View style={  styles.cardContainer} >
-                <Text style={ [globalStyles.title, {marginTop: -20}] } >
-                    { filteredMusic.title}
+                <Text style={ [globalStyles.title, {marginTop: -90}] } >
+                    { title }
                     </Text>
                     <Image 
                             // style={{ width: 320, height:250, resizeMode: 'contain', padding: 20 }}
                             style={  globalStyles.musicImg2}
-                            source={filteredMusic.source}
+                            source={ pic }
                             />  
                     <View>
-                    <Text style={ styles.info} > ID: {filteredMusic.id} </Text>
+                    <Text style={ styles.info} > ID: 
+                    {id} 
+                    </Text>
 
                         <View style={ styles.inline} >
                             <Text style={ styles.info } >Year: </Text>
-                            <Text style={{ fontSize:22 }} >{filteredMusic.year}</Text>
+                            <Text style={{ fontSize:22 }} >
+                                {year}
+                                </Text>
                         </View>
 
                         <View style={ styles.inline} >
                             <Text style={ styles.info } >Rating: </Text>
-                            <Text style={{ fontSize:22,  color: 'red', fontWeight: 'bold' }} >{filteredMusic.rating}*</Text>
+                            <Text style={{ fontSize:22,  color: 'red', fontWeight: 'bold' }} >
+                                { rating }
+                                </Text>
                         </View>
 
-                        <View style={ styles.inline} >
+                        {/* <View style={ styles.inline} >
                             <Text style={ styles.info } >Tracks: </Text>
-                            <Text style={{ fontSize:22 }} >{filteredMusic.tracks} </Text>
+                            <Text style={{ fontSize:22 }} >
+                                { tracks } 
+                            </Text>                                               
+                        </View> */}
+
+                        <View>
+                        <Text>
+                                Track 1
+                        </Text>
+                        <Text>
+                                Track 2
+                        </Text>
+
+                        <Text>
+                                Track 3
+                        </Text>
+                        <Text>
+                                Track 4
+                        </Text>
+
+
                         </View>
+
+                        
                         
                     </View>        
                 </View>            
@@ -77,6 +113,7 @@ const styles = StyleSheet.create({
     },
 
     info: {
+        marginTop: -5,
         fontSize: 22,
         fontWeight: 'bold'
     }

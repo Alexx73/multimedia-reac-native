@@ -69,7 +69,15 @@ export const DATOS = [
       price: 3300,
       tracks: 14, 
       rating: '*****hye',
-      source: require('../assets/movies/music1.jpg')
+      source: require('../assets/movies/music1.jpg'),
+      tracks: {
+        track1: 'track 1: Interstate Love Song',
+        track2: 'track 1: Interstate Love Song',
+        track3: 'track 1: Interstate Love Song',
+        track4: 'track 1: Interstate Love Song',
+        track5: 'https://firebasestorage.googleapis.com/v0/b/app-tienda-18e1b.appspot.com/o/music%2F10%20Interstate%20Love%20Song.mp3?alt=media&token=ef1a9db6-5b52-4773-8143-3d6cf305e658',
+      }
+            
     },
     {
       id: '2',

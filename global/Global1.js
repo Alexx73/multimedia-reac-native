@@ -24,7 +24,7 @@ const globalStyles = StyleSheet.create({
     },
     
     title: {
-        marginTop: -80,
+        marginTop: -90,
         fontSize: 35,
         fontWeight: 'bold',
         textAlign: 'center',

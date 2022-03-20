@@ -36,9 +36,6 @@ function ProductDetailScreen ({ route, navigation  }) {
 
                             {/* <AntDesign name="star" size={22} color="yellow" /> */}
                             
-
-
-
                         </View>
 
                         <View style={ styles.inline} >
@@ -46,12 +43,10 @@ function ProductDetailScreen ({ route, navigation  }) {
                             <Text style={{ fontSize:22 }} >{duration}</Text>
                         </View>
                         
-                        
+                       
                     </View>        
                 </View>            
             </View>
-      
-
     )
 }
 

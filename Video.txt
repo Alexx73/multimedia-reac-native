@@ -12,3 +12,5 @@ clase 11
 02
 
 55
+
+import { Audio, Video } from 'expo-av';

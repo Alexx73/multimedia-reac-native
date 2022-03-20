@@ -6,6 +6,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 import MusicNavigator from './MusicNavigator'
 import ShopNavigator from './ShopNavigator'
+import ProfileNavigator from './ProfileNavigator';
 
 const Tab = createBottomTabNavigator()
 
@@ -28,7 +29,7 @@ function TabNavigator () {
                 tabBarLabel:  'Music now',
                 tabBarIcon: ({ focused }) => (
 
-                    <MaterialIcons name="library-music" size={38} color="black" />
+                    <MaterialIcons name="library-music" size={32} color="black" />
                     // <Image
                     //   focused={focused}
                     //   source={require('../assets/movies/music.png')}
@@ -45,11 +46,26 @@ function TabNavigator () {
             options={{
                 tabBarLabel:  'Movies now',
                 tabBarIcon: ({ focused }) => (
-                    <MaterialIcons name="movie" size={24} color="black" />
+                    <MaterialIcons name="movie" size={30} color="black" />
                     
                   ),
             }}
             />
+
+            <Tab.Screen 
+                name="Profile" component={ProfileNavigator} 
+                screenOptions={{
+                    title: 'Movies 2',
+                }}
+                options={{
+                    tabBarLabel:  'Profile',
+                tabBarIcon: ({ focused }) => (
+                    <MaterialIcons name="person" size={40} color="black" />
+                    
+                  ),
+            }}
+            />
+
         </Tab.Navigator>
     )
 }
