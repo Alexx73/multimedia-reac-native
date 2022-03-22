@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Text, View, StyleSheet, Image } from 'react-native'
+import ImageSelector from '../components/ImageSelector'
 import { globalStyles, images } from '../global/Global1'
 
 
@@ -12,9 +13,11 @@ function ProfileScreen () {
                 Profile Screen
             </Text>
 
-            <Image  
+            {/* <Image  
                 style={globalStyles.musicImg}
-                source={ require('../assets/movies/music2.jpg') } />
+                source={ require('../assets/movies/music2.jpg') } /> */}
+
+            <ImageSelector />
 
             <Text>
                 Name: Tristan Luna
@@ -32,7 +35,7 @@ const styles = StyleSheet.create({
 
     profile: {
         flex:1 ,
-        backgroundColor: 'red',
+        // backgroundColor: 'yellow',
     },
     
 })
