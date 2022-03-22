@@ -67,7 +67,8 @@ function MusicScreen ({navigation}) {
                         tracks: item.tracks, 
                         pic: item.source,
                         rating: '*****',
-                        id: item.id
+                        id: item.id,
+
                     }
                     
                     )                

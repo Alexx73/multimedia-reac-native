@@ -1,18 +1,20 @@
 import React from 'react'
 
-import { Text, View, StyleSheet, Image} from 'react-native'
+import { Text, View, StyleSheet, Image, TouchableOpacity} from 'react-native'
 
 import { globalStyles, images } from '../global/Global1'
 import { MUSIC, DATOS } from '../data/datos'
 
 import { useSelector } from 'react-redux'
 import { Audio, Video } from 'expo-av';
+import { MaterialIcons } from '@expo/vector-icons';
 
 
 function MusicDetailScreen ({ navigation , route}) {
 
-
     
+      
+         
 
     // ------------------------
     const music = useSelector ( state => state.music.list)
@@ -23,17 +25,11 @@ function MusicDetailScreen ({ navigation , route}) {
     console.log(music[selectedMusic])
 
 
-    const { title, year, tracks, pic, rating, id } = route.params
+    const { title, year,tracks, pic, rating, id,  } = route.params
 
     console.log(route.params)
     return (
-        // <View>
-        //     <Text>
-        //     MusicDetailScreen
-        //     </Text>
-            
-        // </View>
-
+       
         <View style={ styles.screen} >
                 <View style={  styles.cardContainer} >
                 <Text style={ [globalStyles.title, {marginTop: -90}] } >
@@ -71,11 +67,31 @@ function MusicDetailScreen ({ navigation , route}) {
                         </View> */}
 
                         <View>
+
+                        <TouchableOpacity
+                        onPress={ () => {console.log(tracks.track1, " pressed")
+                        console.log('move on')
+                        }
+                        
+                        }
+                        >
+                            <Text>
+                                    {tracks.track1}
+
+                            </Text>
+                        </TouchableOpacity>    
+
+                        <TouchableOpacity>
+                            <Text>
+                                    {tracks.track2}
+
+                            </Text>
+                        </TouchableOpacity>  
+
+
+                        
                         <Text>
-                                Track 1
-                        </Text>
-                        <Text>
-                                Track 2
+                            {tracks.track2}
                         </Text>
 
                         <Text>
