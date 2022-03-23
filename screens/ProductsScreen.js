@@ -28,7 +28,8 @@ function ProductsScreen ({ navigation }) {
                     year: 2022,
                     pic: 2,
                     rating: '*****',
-                    duration: '148 min'
+                    duration: '148 min',
+                    url:'https://firebasestorage.googleapis.com/v0/b/app-tienda-18e1b.appspot.com/o/mov%2FM4.mp4?alt=media&token=de5aac0c-dbb0-4c8f-8a4f-bba41b1c9d23'
                     } )} >
                         
                     <Image 

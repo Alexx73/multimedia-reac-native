@@ -1,3 +1,11 @@
+clase 17
+
+39
+
+00
+
+-------------------
+
 clase 9
 
 1 52 
@@ -14,3 +22,5 @@ clase 11
 55.
 
 import { Audio, Video } from 'expo-av';
+
+

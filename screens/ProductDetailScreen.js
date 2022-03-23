@@ -4,10 +4,11 @@ import { Text, View, StyleSheet, Button, Image } from 'react-native'
 import { images } from '../global/Global1'
 
 import { AntDesign } from '@expo/vector-icons';
+import VideoPlayer from '../components/VideoPlayer';
 
 function ProductDetailScreen ({ route, navigation  }) {
     
-    const {title, year, pic, rating, duration} = route.params
+    const {title, year, pic, rating, duration, url} = route.params
     
     const pat2 = '../assets/movies/'
 
@@ -19,11 +20,16 @@ function ProductDetailScreen ({ route, navigation  }) {
                 <View style={  styles.cardContainer} >
                 <Text style={ styles.title } >
                     {title}
+                    
                     </Text>
-                    <Image 
+
+                    <VideoPlayer
+                    source={{url}}
+                    ></VideoPlayer>
+                    {/* <Image 
                             style={{ width: 330, height:260, resizeMode: 'contain', padding: 20 }}
                             source={ images.img[pic] }
-                            />  
+                            />   */}
                     <View>
                         <View style={ styles.inline} >
                             <Text style={ styles.info } >Year: </Text>

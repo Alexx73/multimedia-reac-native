@@ -17,7 +17,8 @@ export const DATOS = [
       year: '1991',
       price: 3000,
       rating: '*****',
-      source: require('../assets/movies/mov2.jpg')
+      source: require('../assets/movies/mov2.jpg'),
+      url: 'https://firebasestorage.googleapis.com/v0/b/app-tienda-18e1b.appspot.com/o/mov%2FM4.mp4?alt=media&token=de5aac0c-dbb0-4c8f-8a4f-bba41b1c9d23'
     },
     {
       id: '3',
