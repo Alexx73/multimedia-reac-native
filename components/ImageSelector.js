@@ -64,14 +64,19 @@ function ImageSelector () {
             onPress={handleTakeImage}
           /> */}
 
+          {/* <View style={{ width: '95%' }} > */}
             <TouchableOpacity
-            style={styles.button}
-            title="Tomar Foto"
-            color={Colors.primary }
-            onPress={handleTakeImage}
-            >
-              <Text>Tomar foto</Text>
-            </TouchableOpacity>
+              style={styles.button}
+              title="Tomar Foto"
+              color={Colors.primary }
+              onPress={handleTakeImage}
+              >
+                <Text>Tomar foto</Text>
+              </TouchableOpacity>
+
+          {/* </View> */}
+
+           
 
         </View>
 
@@ -95,14 +100,21 @@ const styles = StyleSheet.create({
         // borderWidth: 1,
       },
       image: {
-        width: '100%',
-        height: '100%',
+        padding: 20 ,
+        width: '90%',
+        height: '90%',
         borderRadius: 20,
+        // margin: 5,
+        // backgroundColor: 'red',
       },
       button: {
         alignItems: "center",
-        backgroundColor: Colors.secondary ,
-        padding: 10
+        backgroundColor: Colors.third ,
+        padding: 10,
+        borderRadius: 50,
+        padding: 10,
+        marginHorizontal: 5,
+        // width: '95%'
       },
       
     
