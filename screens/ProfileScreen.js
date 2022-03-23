@@ -9,9 +9,9 @@ import { globalStyles, images } from '../global/Global1'
 function ProfileScreen () {
     return (
         <View style={ styles.profile } >
-            <Text>
+            {/* <Text>
                 Profile Screen
-            </Text>
+            </Text> */}
 
             {/* <Image  
                 style={globalStyles.musicImg}
@@ -20,7 +20,7 @@ function ProfileScreen () {
             <ImageSelector />
 
             <Text>
-                Name: Tristan Luna
+                Usuario: Tristan Luna
             </Text>
 
             <Text>
