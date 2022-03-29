@@ -58,7 +58,7 @@ function MusicScreen ({navigation}) {
             renderItem={({item}) => (
                 <View>
                     <Text style={{color:'#00203FFF', fontSize: 16, fontWeight:'bold', marginTop:5}} >
-                    { item.title} + now
+                    { item.title}
                     </Text>
                     <TouchableOpacity onPress={ () => {console.log(item.title)
                     navigation.navigate('MusicDetails',{

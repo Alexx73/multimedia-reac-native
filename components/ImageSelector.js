@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { Text, View, StyleSheet, Button, Image, TouchableOpacity } from 'react-native'
 import * as ImagePicker from 'expo-image-picker'
 import Colors from '../global/Colors'
+import { userPic } from '../store/actions/music.action'
 
 
 
@@ -44,6 +45,7 @@ function ImageSelector () {
         console.log(image)
         setPickedUri(image.uri)
         onImageSelected( image.uri )
+        dispatch(userPic(onImageSelected))
       }
       }
   
