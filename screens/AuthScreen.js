@@ -1,13 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux';
 
 import { Text, View, StyleSheet, Input, TouchableOpacity, TextInput, Button } from 'react-native'
 import Colors from '../global/Colors';
+import { signUp } from '../store/actions/auth.action'
 
 function AuthScreen () {
 
+  const dispatch = useDispatch()
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  const handleSignUp = () => {
+    // console.log('signup pressed', email, password )
+    dispatch(signUp(email, password))
+  }
+
     const title = 'REGISTRO',
     message = 'Ya tienes cuenta?',
-    messageAction = 'Ingresar',
+    messageAction = 'Ingresar now',
     messageTarget = 'Login';
 
     return (
@@ -16,11 +27,22 @@ function AuthScreen () {
                 <Text style={styles.title} > {title} </Text>
 
                 <Text  style={styles.label} > Email </Text>
-                <TextInput />
+                <TextInput
+                value={email}
+                onChangeText={setEmail}
+                keyboardType="email-address"
+                autoCapitalize='none'
+                />
 
                 <Text  style={styles.label}> Clave </Text>
-                <TextInput />
-                <Button title="REGISTRATSE"/>
+                <TextInput 
+                value={password}
+                onChangeText={setPassword}
+                secureTextEntry
+                />
+                <Button title="REGISTRARSE"
+                onPress={handleSignUp}
+                />
 
 
                 <View style={styles.prompt} >
