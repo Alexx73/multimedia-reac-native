@@ -7,14 +7,14 @@ export const init = () => {
     const promise = new Promise((resolve, reject) => {
         db.transaction((tx) => {
             tx.executeSql(
-               `CREATE TABLE IF NOT EXISTS address(
-                id INTEGER PRIMARY KEY NOT NULL , 
+               `CREATE TABLE IF NOT EXISTS address (
+                id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL , 
                 name TEXT NOT NULL ,
                 image TEXT NOT NULL ,
                 city TEXT NOT NULL ,
-                country  TEXT  NOT NULL,
+                country TEXT  NOT NULL,
                 access TEXT NOT NULL ,
-                favorites TEXT  NOT NULL,
+                favorites TEXT NOT NULL
                 )`,
                 [],
                 () => { resolve() } , 
