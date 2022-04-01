@@ -8,6 +8,7 @@ import thunk from 'redux-thunk';
 
 const RootReducer = combineReducers({
     music: MusicReducer,
+    auth: AuthReducer,
     // breads: BreadReducer,
 })
 
