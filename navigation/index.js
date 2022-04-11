@@ -7,12 +7,15 @@ import AuthNavigator from './AuthNavigator'
 
 function MainNavigator () {
 
-    const isAuthenticated = useSelector( state =>state.auth.token )
+    // const isAuthenticated = useSelector( state =>state.auth.token )
+
+    const isSignedUp = useSelector( state =>state.signIn.token )
+    const isLoggedIn = useSelector( state =>state.signIn.token )
 
     return (
         <NavigationContainer>
 
-            {isAuthenticated 
+            {(isLoggedIn || isSignedUp )
                 ? <TabNavigator />
                 : <AuthNavigator />
             }

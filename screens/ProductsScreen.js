@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { Text, View, StyleSheet, Card, Image, TouchableOpacity } from 'react-native'
+import Colors from '../global/Colors'
 
 function ProductsScreen ({ navigation }) {
 
@@ -14,7 +15,9 @@ function ProductsScreen ({ navigation }) {
                      year: 2016,
                      pic: '1',
                      rating: '****',
-                    duration: '122 min'
+                    duration: '122 min',
+                    url:'https://firebasestorage.googleapis.com/v0/b/app-tienda-18e1b.appspot.com/o/mov%2FM4.mp4?alt=media&token=de5aac0c-dbb0-4c8f-8a4f-bba41b1c9d23'
+                    ,
                      })} >
 
                     <Image 
@@ -29,7 +32,7 @@ function ProductsScreen ({ navigation }) {
                     pic: 2,
                     rating: '*****',
                     duration: '148 min',
-                    url:'https://firebasestorage.googleapis.com/v0/b/app-tienda-18e1b.appspot.com/o/mov%2FM4.mp4?alt=media&token=de5aac0c-dbb0-4c8f-8a4f-bba41b1c9d23'
+                    url:'https://firebasestorage.googleapis.com/v0/b/app-tienda-18e1b.appspot.com/o/mov%2Fma4.mp4?alt=media&token=d753f9a2-d38a-416a-8454-f41e5967241a'
                     } )} >
                         
                     <Image 
@@ -84,7 +87,7 @@ const styles = StyleSheet.create({
         flex:1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#ebb678'
+        backgroundColor: '#1a1a1a'
         // flexDirection: 'row', 
         // padding: 20
     },

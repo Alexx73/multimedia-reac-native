@@ -13,12 +13,12 @@ export const DATOS = [
     {
       id: '2',
       category: 'movies',
-      name: 'Pan Ciabatta Blanco',
+      name: 'Matrix 4',
       year: '1991',
       price: 3000,
       rating: '*****',
       source: require('../assets/movies/mov2.jpg'),
-      url: 'https://firebasestorage.googleapis.com/v0/b/app-tienda-18e1b.appspot.com/o/mov%2FM4.mp4?alt=media&token=de5aac0c-dbb0-4c8f-8a4f-bba41b1c9d23'
+      url: 'https://firebasestorage.googleapis.com/v0/b/app-tienda-18e1b.appspot.com/o/mov%2Fma4.mp4?alt=media&token=d753f9a2-d38a-416a-8454-f41e5967241a'
     },
     {
       id: '3',
@@ -71,13 +71,7 @@ export const DATOS = [
       tracks: 14, 
       rating: '*****hye',
       source: require('../assets/movies/music1.jpg'),
-      tracks: {
-        track1: 'track 1: Live and Let Die',
-        track2: "track 2: Don't Cry",
-        track3: 'track 3: Interstate Love Song',
-        track4: 'track 4: Interstate Love Song',
-        // track5: 'https://firebasestorage.googleapis.com/v0/b/app-tienda-18e1b.appspot.com/o/music%2F10%20Interstate%20Love%20Song.mp3?alt=media&token=ef1a9db6-5b52-4773-8143-3d6cf305e658',
-      }
+      url: 'https://firebasestorage.googleapis.com/v0/b/app-tienda-18e1b.appspot.com/o/music%2Fgn1.mp4?alt=media&token=8a7f797b-2e2f-4fa7-9130-3ef0d2b1e79a'
             
     },
     {
@@ -88,7 +82,8 @@ export const DATOS = [
       price: 3300,
       tracks: 12, 
       rating: '*****',
-      source: require('../assets/movies/music2.jpg')
+      source: require('../assets/movies/music2.jpg'),
+      url: 'https://firebasestorage.googleapis.com/v0/b/app-tienda-18e1b.appspot.com/o/music%2Fgn2.mp4?alt=media&token=e947e879-00d5-4de1-aada-2f6fb07f6b23'
     },
     {
       id: '3',
@@ -98,7 +93,8 @@ export const DATOS = [
       price: 3300,
       tracks: 12, 
       rating: '*****',
-      source: require('../assets/movies/music3.jpg')
+      source: require('../assets/movies/music3.jpg'),
+      url: 'https://firebasestorage.googleapis.com/v0/b/app-tienda-18e1b.appspot.com/o/music%2Faer.mp4?alt=media&token=ef277275-07bf-4f5a-bdc5-6ba9af9941ed',
     }, 
     {
       id: '4',
@@ -108,7 +104,8 @@ export const DATOS = [
       price: 3300,
       tracks: 12, 
       rating: '*****',
-      source: require('../assets/movies/music4.jpg')
+      source: require('../assets/movies/music4.jpg'),
+      url:'https://firebasestorage.googleapis.com/v0/b/app-tienda-18e1b.appspot.com/o/music%2Fstp.mp4?alt=media&token=c11c655d-dec8-42f7-837c-290aec40015f',
     },
     {
       id: '5',
@@ -118,7 +115,8 @@ export const DATOS = [
       price: 3300,
       tracks: 12, 
       rating: '*****',
-      source: require('../assets/movies/music5.jpg')
+      source: require('../assets/movies/music5.jpg'),
+      url: 'https://firebasestorage.googleapis.com/v0/b/app-tienda-18e1b.appspot.com/o/music%2FMeg.mp4?alt=media&token=2287bbf3-6999-44cf-ade8-4c8b38e1dc30',
     },
     {
       id: '6',
@@ -128,7 +126,8 @@ export const DATOS = [
       price: 3300,
       tracks: 12, 
       rating: '*****',
-      source: require('../assets/movies/music6.jpg')
+      source: require('../assets/movies/music6.jpg'),
+      url: 'https://firebasestorage.googleapis.com/v0/b/app-tienda-18e1b.appspot.com/o/music%2FIron.mp4?alt=media&token=8d7b348e-807c-4a34-aa18-1fbd17eb929d',
     }
 
 

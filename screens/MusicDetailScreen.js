@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react';
 
 import { Text, View, StyleSheet, Image, TouchableOpacity} from 'react-native'
 
@@ -8,13 +8,15 @@ import { MUSIC, DATOS } from '../data/datos'
 import { useSelector } from 'react-redux'
 import { Audio, Video } from 'expo-av';
 import { MaterialIcons } from '@expo/vector-icons';
+import Colors from '../global/Colors';
 
 
 function MusicDetailScreen ({ navigation , route}) {
 
+    const video = React.useRef(null);
+    const [status, setStatus] = React.useState({});
     
-      
-         
+             
 
     // ------------------------
     const music = useSelector ( state => state.music.list)
@@ -24,87 +26,47 @@ function MusicDetailScreen ({ navigation , route}) {
     const filteredMusic = music.filter( item => item.music === selectedMusic)
     console.log(music[selectedMusic])
 
+    const {title, year, pic, rating, duration, url} = route.params
 
-    const { title, year,tracks, pic, rating, id,  } = route.params
+    // const { title, year,tracks, pic, rating, id,  } = route.params
 
     console.log(route.params)
     return (
        
         <View style={ styles.screen} >
                 <View style={  styles.cardContainer} >
-                <Text style={ [globalStyles.title, {marginTop: -90}] } >
+                    <Text style={ [globalStyles.title, {marginTop: -90}, styles.text1] } >
                     { title }
                     </Text>
-                    <Image 
-                            // style={{ width: 320, height:250, resizeMode: 'contain', padding: 20 }}
-                            style={  globalStyles.musicImg2}
-                            source={ pic }
-                            />  
+                    <Video
+                        ref={video}
+                        style={styles.video}
+                        source={{  uri: url  
+                        }}
+                        useNativeControls
+                        resizeMode="contain"
+                        // isLooping
+                        onPlaybackStatusUpdate={status => setStatus(() => status)}
+                    />
+                   
                     <View>
-                    <Text style={ styles.info} > ID: 
+                    {/* <Text style={ styles.text1} > ID: 
                     {id} 
-                    </Text>
+                    </Text> */}
 
                         <View style={ styles.inline} >
-                            <Text style={ styles.info } >Year: </Text>
-                            <Text style={{ fontSize:22 }} >
+                            <Text style={ styles.text1 } >Year: </Text>
+                            <Text style={ styles.text1 } >
                                 {year}
                                 </Text>
                         </View>
 
                         <View style={ styles.inline} >
-                            <Text style={ styles.info } >Rating: </Text>
-                            <Text style={{ fontSize:22,  color: 'red', fontWeight: 'bold' }} >
+                            <Text style={ styles.text1 } >Rating: </Text>
+                            <Text style={ styles.text1 } >
                                 { rating }
                                 </Text>
-                        </View>
-
-                        {/* <View style={ styles.inline} >
-                            <Text style={ styles.info } >Tracks: </Text>
-                            <Text style={{ fontSize:22 }} >
-                                { tracks } 
-                            </Text>                                               
-                        </View> */}
-
-                        <View>
-
-                        <TouchableOpacity
-                        onPress={ () => {console.log(tracks.track1, " pressed")
-                        console.log('move on')
-                        }
-                        
-                        }
-                        >
-                            <Text>
-                                    {tracks.track1}
-
-                            </Text>
-                        </TouchableOpacity>    
-
-                        <TouchableOpacity>
-                            <Text>
-                                    {tracks.track2}
-
-                            </Text>
-                        </TouchableOpacity>  
-
-
-                        
-                        <Text>
-                            {tracks.track2}
-                        </Text>
-
-                        <Text>
-                                Track 3
-                        </Text>
-                        <Text>
-                                Track 4
-                        </Text>
-
-
-                        </View>
-
-                        
+                        </View>                    
                         
                     </View>        
                 </View>            
@@ -119,9 +81,13 @@ const styles = StyleSheet.create({
         flex:1,
         alignItems: 'center',
         justifyContent: 'center',
-        // backgroundColor: '#e6e6fa',
-        // backgroundColor: '#00203FFF',
-        // backgroundColor: 'red',
+        backgroundColor: Colors.black1
+    },
+    video: {
+        marginTop: -40,
+        padding: 10,
+        width: 380,
+        height: 380,
     },
 
     inline: {
@@ -129,9 +95,13 @@ const styles = StyleSheet.create({
     },
 
     info: {
-        marginTop: -5,
+        marginTop: 5,
         fontSize: 22,
         fontWeight: 'bold'
+    },
+    text1: {
+        color: Colors.green,
+        fontSize:22
     }
     
 })

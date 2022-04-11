@@ -1,31 +1,53 @@
-import React from 'react'
+import * as React from 'react';
 
 import { Text, View, StyleSheet, Button, Image } from 'react-native'
 import { images } from '../global/Global1'
 
 import { AntDesign } from '@expo/vector-icons';
 import VideoPlayer from '../components/VideoPlayer';
+import Colors from '../global/Colors';
+import { Video, AVPlaybackStatus } from 'expo-av';
+
 
 function ProductDetailScreen ({ route, navigation  }) {
     
     const {title, year, pic, rating, duration, url} = route.params
-    
     const pat2 = '../assets/movies/'
+
+    console.log(url)
+  const video = React.useRef(null);
+  const [status, setStatus] = React.useState({});
 
 
   
   
     return (   
             <View style={ styles.screen} >
-                <View style={  styles.cardContainer} >
+                <View  >
                 <Text style={ styles.title } >
                     {title}
+                    {/* {url} */}
                     
-                    </Text>
+                 </Text>
+                 <View style={styles.container}>
+                    <Text> { }</Text>
+                    <Video
+                        ref={video}
+                        style={styles.video}
+                        source={{  uri: url  
+                        }}
+                        useNativeControls
+                        resizeMode="contain"
+                        // isLooping
+                        onPlaybackStatusUpdate={status => setStatus(() => status)}
+                    />
+                    
+                </View>
+                 
 
-                    <VideoPlayer
-                    source={{url}}
-                    ></VideoPlayer>
+                    {/* <VideoPlayer
+                    source={url}
+                    ></VideoPlayer> */}
                     {/* <Image 
                             style={{ width: 330, height:260, resizeMode: 'contain', padding: 20 }}
                             source={ images.img[pic] }
@@ -33,12 +55,12 @@ function ProductDetailScreen ({ route, navigation  }) {
                     <View>
                         <View style={ styles.inline} >
                             <Text style={ styles.info } >Year: </Text>
-                            <Text style={{ fontSize:22 }} >{year}</Text>
+                            <Text style={styles.text1} >{year}</Text>
                         </View>
 
                         <View style={ styles.inline} >
                             <Text style={ styles.info } >Rating: </Text>
-                            <Text style={{ fontSize:22, color:'yellow', fontWeight: 'bold' }} >{rating}</Text>
+                            <Text style={styles.text1} >{rating}</Text>
 
                             {/* <AntDesign name="star" size={22} color="yellow" /> */}
                             
@@ -46,7 +68,7 @@ function ProductDetailScreen ({ route, navigation  }) {
 
                         <View style={ styles.inline} >
                             <Text style={ styles.info } >Duration: </Text>
-                            <Text style={{ fontSize:22 }} >{duration}</Text>
+                            <Text style={styles.text1} >{duration}</Text>
                         </View>
                         
                        
@@ -62,7 +84,12 @@ const styles = StyleSheet.create({
         flex:1,
         alignItems: 'center',
         justifyContent: 'center',
-        // backgroundColor: 'lightblue'
+        backgroundColor: Colors.black2
+    },
+
+    video: {
+        width: 340,
+        height: 280,
     },
 
     cardContainer: {
@@ -88,15 +115,23 @@ const styles = StyleSheet.create({
         fontSize: 35,
         fontWeight: 'bold',
         textAlign: 'center',
-        marginBottom: 5
+        marginBottom: 5,
+        marginTop: -100,
+        color: Colors.green,
     },
 
     info: {
         fontSize: 22,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        color: Colors.green,
+
     },
     inline: {
         flexDirection: 'row'
+    },
+    text1: {
+        color: Colors.green,
+        fontSize:22
     }
 })
 

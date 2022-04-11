@@ -19,11 +19,12 @@ function ProfileScreen () {
 
             <ImageSelector />
 
-            <Text>
-                Usuario: Tristan Luna
-            </Text>
+            <Text style={[ styles.text1, { fontWeight: 'bold' } ]} >
+                Usuario: 
+                <Text style={ styles.text1 }>Tristan Luna</Text>
+            </Text  >
 
-            <Text>
+            <Text  style={ styles.text1 } >
                 Favorites: movie 1
             </Text>
         </View>
@@ -35,8 +36,16 @@ const styles = StyleSheet.create({
 
     profile: {
         flex:1 ,
-        // backgroundColor: 'yellow',
+        backgroundColor: '#595959',
+        color: 'white'
     },
+
+    text1: {
+        color: 'white',
+        fontSize: 20,
+        marginBottom: 5,
+
+    }
     
 })
 
