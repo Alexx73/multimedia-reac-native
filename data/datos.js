@@ -2,18 +2,18 @@ export const DATOS = [
     {
       id: '1',
       category: 'movies',
-      name: 'Pan Baguette',
-      description: 'Clásico pan francés',
+      title: 'Star Trek Beyond',
       year: '1991',
       price: 1600,
       rating: '*****',
-      source: require('../assets/movies/mov1.jpg')
+      source: require('../assets/movies/mov1.jpg'),
+      url: 'https://firebasestorage.googleapis.com/v0/b/app-tienda-18e1b.appspot.com/o/mov%2FSt-trek.mp4?alt=media&token=ee5d370e-7b3b-49e2-88d8-5c62f396f9aa',
 
     },
     {
       id: '2',
       category: 'movies',
-      name: 'Matrix 4',
+      title: 'Matrix 4',
       year: '1991',
       price: 3000,
       rating: '*****',
@@ -23,22 +23,26 @@ export const DATOS = [
     {
       id: '3',
       category: 'movies',
-      name: 'Pan Hamburguesa',
+      title: '',
       year: '1991',
       price: 500,
       rating: '*****',
-      source: require('../assets/movies/mov3.jpg')
+      source: require('../assets/movies/mov3.jpg'),
+      url: '',
+
     },
     {
       id: '4',
       category: 'movies',
-      name: 'Pan de Molde Integral de Centeno',
-      weight: '900gr',
+      title: 'The Tomorrow War',
+      year: '1991',
       price: 3300,
       rating: '*****',
-      source: require('../assets/movies/mov4.jpg')
+      source: require('../assets/movies/mov4.jpg'),
+      url: '',
 
     },
+    
     {
       id: '5',
       category: 'music',

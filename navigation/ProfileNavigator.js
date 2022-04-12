@@ -16,7 +16,7 @@ function ProfileNavigator () {
       <Stack.Navigator
       screenOptions={{
         headerShown: true,
-        title: 'Profile'
+        title: 'Profiles'
     }}>
         {/* <Stack.Screen name="Categories" component={CategoriesScreen} /> */}
         <Stack.Screen 
@@ -36,14 +36,8 @@ function ProfileNavigator () {
       }}
          />
         
-        {/* <Stack.Screen 
-        name="Music" 
-        component={MusicScreen} 
-        options={{
-          
-        }}
-        />         */}
-        
+      
+      
 
       </Stack.Navigator>
   );

@@ -60,13 +60,7 @@ function ImageSelector () {
               style={styles.image} source={{ uri: pickedUri }} />}
           </View>
 
-          {/* <Button
-            title="Tomar Foto"
-            color={Colors.primary }
-            onPress={handleTakeImage}
-          /> */}
-
-          {/* <View style={{ width: '95%' }} > */}
+        
             <TouchableOpacity
               style={styles.button}
               title="Tomar Foto"
@@ -75,11 +69,7 @@ function ImageSelector () {
               >
                 <Text>Tomar foto</Text>
               </TouchableOpacity>
-
-          {/* </View> */}
-
-           
-
+          
         </View>
 
     )
@@ -98,16 +88,14 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         justifyContent: 'center',
         alignItems: 'center',
-        // borderColor: COLORS.BLUSH,
-        // borderWidth: 1,
+      
       },
       image: {
         padding: 20 ,
         width: '90%',
         height: '90%',
         borderRadius: 20,
-        // margin: 5,
-        // backgroundColor: 'red',
+      
       },
       button: {
         alignItems: "center",
@@ -116,7 +104,6 @@ const styles = StyleSheet.create({
         borderRadius: 50,
         padding: 10,
         marginHorizontal: 5,
-        // width: '95%'
       },
       
     

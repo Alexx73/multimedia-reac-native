@@ -37,10 +37,7 @@ function TabNavigator () {
                 tabBarIcon: ({ focused }) => (
 
                     <MaterialIcons name="library-music" size={32} color="#9B641C" />
-                    // <Image
-                    //   focused={focused}
-                    //   source={require('../assets/movies/music.png')}
-                    //   style={{height:50, width:50}}/>
+                   
                   ),
             }}   
             />

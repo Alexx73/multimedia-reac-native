@@ -16,12 +16,10 @@ function ProductsScreen ({ navigation }) {
                      pic: '1',
                      rating: '****',
                     duration: '122 min',
-                    url:'https://firebasestorage.googleapis.com/v0/b/app-tienda-18e1b.appspot.com/o/mov%2FM4.mp4?alt=media&token=de5aac0c-dbb0-4c8f-8a4f-bba41b1c9d23'
-                    ,
+                    url: 'https://firebasestorage.googleapis.com/v0/b/app-tienda-18e1b.appspot.com/o/mov%2FSt-trek.mp4?alt=media&token=ee5d370e-7b3b-49e2-88d8-5c62f396f9aa' ,
                      })} >
 
                     <Image 
-                    // style={ { width: 120, height:110, resizeMode: 'contain' }}
                     style={styles.tinyLogo}
                     source={ require('../assets/movies/mov1.jpg')} />
                 </TouchableOpacity>
@@ -36,7 +34,6 @@ function ProductsScreen ({ navigation }) {
                     } )} >
                         
                     <Image 
-                    // style={ { width: 120, height:110, resizeMode: 'contain' }}
                     style={styles.tinyLogo}
                     source={ require('../assets/movies/mov2.jpg')}
                     />
@@ -46,15 +43,15 @@ function ProductsScreen ({ navigation }) {
 
             <View  style={{ flexDirection: 'row' }} > 
                 <TouchableOpacity onPress={() => navigation.navigate('Details', {
-                    title: "The Rise of Skywlker",  
+                    title: "The Rise of Skywalker",  
                     year: 2019,
                     pic: 3,
                     rating: '******',
-                    duration: '89 min'
+                    duration: '89 min',
+                    url: 'https://firebasestorage.googleapis.com/v0/b/app-tienda-18e1b.appspot.com/o/mov%2FSt-war.mp4?alt=media&token=0bf7dcda-58eb-4369-816c-681d6936f1c6',
                     } )} >
                         
                     <Image 
-                    // style={ { width: 120, height:110, resizeMode: 'contain' }}
                     style={styles.tinyLogo}
                     source={ require('../assets/movies/mov3.jpg')}
                     />
@@ -65,7 +62,8 @@ function ProductsScreen ({ navigation }) {
                     year: 2021,
                     pic: 4,
                     rating: '*******',
-                    duration: '135 min'
+                    duration: '135 min',
+                    url: 'https://firebasestorage.googleapis.com/v0/b/app-tienda-18e1b.appspot.com/o/mov%2FTomwar-1.mp4?alt=media&token=ffd340ed-688a-4dd5-81a9-585b5b60030f',
                     })} >
                     <Image 
                     // style={ { width: 120, height:110, resizeMode: 'contain' }}

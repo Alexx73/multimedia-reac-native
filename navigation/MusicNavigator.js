@@ -19,7 +19,6 @@ const MusicNavigator = () => {
 
     const handleLogout =  () => {
         console.log("icono salir + pressed") 
-        console.log('just pressed')
         // const isLoggedIn = useSelector( state =>state.signIn.logout )
  
     }

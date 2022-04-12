@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
       input: {
         paddingHorizontal: 2,
         paddingVertical: 5,
-        // borderBottomColor: '#ccc',
         borderBottomWidth: 1,
         marginBottom: 8,
         borderBottomColor: Colors.green,

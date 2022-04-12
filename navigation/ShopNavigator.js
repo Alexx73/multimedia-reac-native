@@ -15,11 +15,13 @@ import { AntDesign } from '@expo/vector-icons';
 import Colors from '../global/Colors';
 const Stack = createNativeStackNavigator();
 
-function ShopNavigator () {
+function ShopNavigator ({ route}) {
+
+  const title = route.params
+  console.log('title', title)
 
   const handleLogout =  () => {
     console.log("icono salir + pressed") 
-    console.log('just pressed')
     // const isLoggedIn = useSelector( state =>state.signIn.logout )
 
 }
@@ -67,7 +69,8 @@ function ShopNavigator () {
 
         <Stack.Screen name="Details" component={ProductDetailScreen} 
              options={{
-              title: 'Matrix 4',
+             
+              title: '',
               headerTitleStyle:{
                   color: Colors.green,
                   fontSize:25,
@@ -79,6 +82,7 @@ function ShopNavigator () {
                   color: 'white'
               },
               headerTintColor: '#fff',
+              
           }}
         />
 

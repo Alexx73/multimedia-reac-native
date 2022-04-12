@@ -1,6 +1,3 @@
-// import Roboto from '../assets/fonts/Roboto-Regular.ttf'
-
-
 
 
 export default {
@@ -14,6 +11,7 @@ export default {
     third: "#da627d",
     fourth: "#ffa5ab",
     fifth: "#f9dbbd",
+    'Robo1': require('../assets/fonts/Roboto-Bold.ttf')
     // RoboReg: "Roboto-Regular",
     // RoboBold: "Roboto-Bold",
   };

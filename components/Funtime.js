@@ -2,16 +2,19 @@ import React from 'react'
 
 import { Text, View, StyleSheet } from 'react-native'
 import Colors from '../global/Colors'
-
-// import { useFonts } from 'expo-font';
-
-
+import { useFonts } from 'expo-font';
+import AppLoading from 'expo-app-loading';
 
 function Funtime () {
 
-    // const [loaded] = useFonts({
-    //     RoboBold: require('../assets/fonts/Roboto-Bold.ttf'),
-    //   });
+    const [ loaded ] = useFonts({
+        'Roboto': require('../assets/fonts/Roboto-Regular.ttf'),
+        'Roboto-Bold': require('../assets/fonts/Roboto-Bold.ttf'),
+      })
+    
+      if (!loaded) return <AppLoading />
+
+    
     return (
         <View styles={ styles.inline } >
             <Text style={ styles.banner1} > FU
@@ -39,6 +42,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 'auto',
         marginLeft:50,
         marginBottom: 70,
+
     },
 
     banner1: {
@@ -46,8 +50,7 @@ const styles = StyleSheet.create({
         fontSize: 55,
         color: Colors.black,
         textAlign: 'center',
-        fontFamily: Colors.RoboBold,
-        fontWeight: 'bold'
+        fontFamily: 'Roboto-Bold',
 
 
 
@@ -56,8 +59,7 @@ const styles = StyleSheet.create({
     banner2: {
         fontSize: 58,
         color: Colors.green,
-        fontFamily: Colors.RoboBold,
-        fontWeight: 'bold'
+        // fontWeight: 'bold'
 
 
     }

@@ -44,14 +44,7 @@ function ProductDetailScreen ({ route, navigation  }) {
                     
                 </View>
                  
-
-                    {/* <VideoPlayer
-                    source={url}
-                    ></VideoPlayer> */}
-                    {/* <Image 
-                            style={{ width: 330, height:260, resizeMode: 'contain', padding: 20 }}
-                            source={ images.img[pic] }
-                            />   */}
+            
                     <View>
                         <View style={ styles.inline} >
                             <Text style={ styles.info } >Year: </Text>

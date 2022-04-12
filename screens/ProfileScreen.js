@@ -9,14 +9,7 @@ import { globalStyles, images } from '../global/Global1'
 function ProfileScreen () {
     return (
         <View style={ styles.profile } >
-            {/* <Text>
-                Profile Screen
-            </Text> */}
-
-            {/* <Image  
-                style={globalStyles.musicImg}
-                source={ require('../assets/movies/music2.jpg') } /> */}
-
+            
             <ImageSelector />
 
             <Text style={[ styles.text1, { fontWeight: 'bold' } ]} >
